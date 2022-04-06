@@ -3,4 +3,4 @@ const allTricksData = () => {
   .then(response => response.json())
 }
 
-export allTricksData;
+export default allTricksData;
