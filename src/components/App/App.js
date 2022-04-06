@@ -15,6 +15,7 @@ import React from 'react';
 import './App.css'
 import allTricksData from './APIcalls';
 import Tricks from './Tricks';
+import Form from './Form';
 
 class App extends React.Component {
   constructor() {
@@ -37,6 +38,7 @@ class App extends React.Component {
     return (
       <main className='App'>
         <h1>Sick Trick Wish List</h1>
+        <Form />
         <Tricks allTricks={this.state.allTricks}/>
       </main>
     )
