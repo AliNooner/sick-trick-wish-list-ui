@@ -34,11 +34,15 @@ class App extends React.Component {
       );
   }
 
+  addNewTrick = (newTrick) => {
+    this.setState({allTricks: [...this.state.allTricks, newTrick]})
+  }
+
   render() {
     return (
       <main className='App'>
         <h1>Sick Trick Wish List</h1>
-        <Form />
+        <Form addNewTrick= {this.addNewTrick}/>
         <Tricks allTricks={this.state.allTricks}/>
       </main>
     )
