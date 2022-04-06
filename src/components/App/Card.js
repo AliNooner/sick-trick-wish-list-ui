@@ -7,7 +7,7 @@ const Card = ({stance, name, obstacle, tutorial, id, deleteTrick}) => {
       <h3>{stance} {name}</h3>
       <p>Obstacle: {obstacle}</p>
       <p>Tutorial: {tutorial}</p>
-      <button onClick= {() => deleteTrick(id)}>trash bruh</button>
+      <button onClick= {() => deleteTrick(id)}>x</button>
     </div>
   )
 }
