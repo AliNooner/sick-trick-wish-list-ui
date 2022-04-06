@@ -38,12 +38,17 @@ class App extends React.Component {
     this.setState({allTricks: [...this.state.allTricks, newTrick]})
   }
 
+  deleteTrick = (id) => {
+    const filteredTricks = this.state.allTricks.filter(trick => trick.id !=id)
+    this.setState( {allTricks: filteredTricks})
+  }
+
   render() {
     return (
       <main className='App'>
         <h1>Sick Trick Wish List</h1>
         <Form addNewTrick= {this.addNewTrick}/>
-        <Tricks allTricks={this.state.allTricks}/>
+        <Tricks allTricks={this.state.allTricks} deleteTrick={this.deleteTrick}/>
       </main>
     )
   }

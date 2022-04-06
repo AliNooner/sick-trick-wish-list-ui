@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Card from './Card';
 import './Tricks.css';
 
-const Tricks = ({allTricks}) => {
+const Tricks = ({allTricks, deleteTrick}) => {
 
   const trickCards = allTricks.map(trick => {
     return (
@@ -13,6 +13,7 @@ const Tricks = ({allTricks}) => {
         tutorial={trick.tutorial}
         id={trick.id}
         key={trick.id}
+        deleteTrick= {deleteTrick}
       />
     )
   })
