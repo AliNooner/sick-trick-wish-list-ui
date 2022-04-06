@@ -7,7 +7,7 @@ const Tricks = ({allTricks}) => {
   const trickCards = allTricks.map(trick => {
     return (
       <Card
-        title={trick.title}
+        name={trick.name}
         stance={trick.stance}
         obstacle={trick.obstacle}
         tutorial={trick.tutorial}
